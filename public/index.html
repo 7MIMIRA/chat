@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Chat</title>
         <link href="css/style.css" rel="stylesheet" />
@@ -21,12 +22,26 @@
         <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-        <h1>Welcome to Chat</h1>
-        <textarea name="chat" rows="20" cols="80" readonly wrap></textarea>
-        <br>
-        <div class="inputContainer">
-            <input type="text" id="textField" name="textField" placeholder="Enter your message here.." size="80" />
-            <button name="Submit">Submit</button>
+        <div id="page-container">
+            <div id="app-container">
+                <div id="app-top-bar"></div>
+                <div id="app-body">
+                    <div id="app-body-left-col">
+ 
+                    </div>
+                    <div id="app-body-right-col">
+                        <div id="messages-container"></div>
+                        <div id="chat-input-container">
+                            <textarea 
+                                id="chat-input"
+                                placeholder="Say something..."
+                            ></textarea>
+                            <button id="chat-submit-button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="app-bottom-bar"></div>
+            </div>
         </div>
     </body>
     <script src="js/eventListeners.js"></script>
