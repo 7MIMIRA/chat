@@ -4,6 +4,7 @@
     --body-left-color: #9A879D;
     --body-right-color: #ffffff;
     --border-color: #68576b;
+    --top-bar-height: 100px;
     --chat-input-container-height: 80px;
     --chat-submit-button-color: #6bf4a2;
 }
@@ -42,11 +43,33 @@ textarea {
 
 #app-top-bar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 100px;
-    min-height: 100px;
+    height: var(--top-bar-height);
+    min-height: var(--top-bar-height);
     background-color: var(--header-color);
     border-bottom: 2px solid var(--border-color);
+}
+
+#top-bar-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+#y-catch-phrase-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+#top-bar-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 50%;
 }
 
 #app-body {
@@ -115,4 +138,31 @@ textarea {
     min-height: 23px;
     background-color: var(--footer-color);
     border-top: 2px solid var(--border-color);
+}
+
+.y-title {
+    margin-left: 20px;
+    font-size: 80px;
+    color: #fff;
+}
+
+.y-catch-phrase {
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.profile-bubble {
+    --circle-margin: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--top-bar-height) - var(--circle-margin) * 2);
+    width: calc(var(--top-bar-height) - var(--circle-margin) * 2);
+    margin-right: calc(var(--circle-margin));
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--header-color);
+    background-color: var(--body-right-color);
 }
