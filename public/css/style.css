@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
 :root {
     --header-color: #3c3744;
     --footer-color: var(--header-color);
@@ -140,16 +142,18 @@ textarea {
     border-top: 2px solid var(--border-color);
 }
 
-.y-title {
-    margin-left: 20px;
-    font-size: 80px;
-    color: #fff;
+.y-logo {
+    margin-top: 5px;
+    height: 100px;
+    width: 100px;
 }
 
 .y-catch-phrase {
-    margin-bottom: 0px;
     font-size: 20px;
-    color: #fff;
+    z-index: 99;
+    margin: 0 0 -2.5rem -2rem;
+    font-family: 'Gochi Hand', cursive;
+    color: #ffffffd4;
 }
 
 .profile-bubble {
