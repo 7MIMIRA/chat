@@ -14,9 +14,9 @@ That.. and because y not ;)
 |GET|/api/user/{user_id}|requests details of a specific user
 |GET|/api/messages/{room_id}|requests the messages for a given room|
 |GET|/api/rooms|requests a list of rooms|
-|PUT|/api/user|creates a user|
-|PUT|/api/message|submits a message for a given room|
-|PUT|/api/room|creates a room|
+|POST|/api/user|creates a user|
+|POST|/api/message|submits a message for a given room|
+|POST|/api/room|creates a room|
 
 ### Notes
 At this point I'm not worried about paginating results and will providingt he complete list for list queries (get messages, get users, etc..)
