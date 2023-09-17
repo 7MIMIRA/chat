@@ -31,7 +31,9 @@ In order to keep costs down messages will be given a TTL so they will only be st
 
 
 ## Local Development Notes
-### Starting local MongoDB Daemon
+### Initial MongoDB setup
+// Add instructions to install MongoDB  
+// then...
 - Ensure the following conf file `mongod.conf` is located at `/usr/local/etc/`
 *You may need to make sure the directories defined at `storage.dbPath` and `systemLog.path` exist*
 ```
@@ -48,7 +50,7 @@ systemLog:
    logAppend: true
 
 ```
-### Starting mongod
+### Starting Mongo Daemon (*mongod*)
 ```
 mongod --config /usr/local/etc/mongod.conf
 ```
