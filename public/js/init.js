@@ -1,3 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    initializeListeners();
+    initSocketIO();
+    setupEventListeners();
 });
+
+function initSocketIO() {
+    var socket = io();
+}

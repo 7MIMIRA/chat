@@ -1,4 +1,4 @@
-function initializeListeners() {
+function setupEventListeners() {
     intializeSubmitButton();
 };
 
