@@ -1,11 +1,13 @@
 const express = require("express");
 const { createServer } = require("http");
 const { Server } = require("socket.io");
+const bodyParser = require('body-parser')
 
 const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const router = require('./routes/index.js');
 app.use('/api', router);
