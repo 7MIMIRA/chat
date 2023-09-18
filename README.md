@@ -10,13 +10,15 @@ That.. and because y not ;)
 
 |Method|Path|Description|
 |--|--|--|
-|❌ GET|/api/users/{room_id}|requests a list of users for a given room|
+|❌ GET|/api/users/{room_name}|requests a list of users for a given room|
 |❌ GET|/api/user/{user_id}|requests details of a specific user|
-|❌ GET|/api/messages/{room_id}|requests the messages for a given room|
+|✅ GET|/api/messages/{room_name}|requests the messages for a given room|
 |✅ GET|/api/rooms|requests a list of rooms|
 |❌ POST|/api/user|creates a user|
-|❌ POST|/api/message|submits a message for a given room|
+|✅ POST|/api/message|submits a message for a given room|
 |✅ POST|/api/room/{room_name}|creates a room|
+|❌ DELETE|/api/message/{message_id}|deletes a message with a given ID|
+|✅ DELETE|/api/messages/{room_name}|deletes all messages in a given room|
 |✅ DELETE|/api/room/{room_name}|deletes a room|  
 
 ✅ = Implemented  

@@ -5,8 +5,10 @@ const roomSchema = new mongoose.Schema({
 });
 
 const messageSchema = new mongoose.Schema({
-  room: String,
-  message: String
+  roomName: String,
+  message: String,
+  // TODO: add author data to message
+  // author: String
 });
 
 const Room = mongoose.model('Room', roomSchema);
