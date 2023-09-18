@@ -16,8 +16,11 @@ router.post('/room/:roomName', (req, res) => {
     .then(() => {
       res.send(`${roomName} room created\n`);
     })
-    .catch(() => {
-      res.send(`${roomName} create failed\n`);
+    .catch(error => {
+      if (error.includes("room already exists")) {
+        res.sendStatus(403); // resource already exists
+      }
+      res.sendStatus(500);
     });
 });
 

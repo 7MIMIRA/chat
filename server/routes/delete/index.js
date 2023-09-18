@@ -6,10 +6,10 @@ router.delete('/room/:roomName', (req, res) => {
   const { roomName } = req.params;
   deleteRoom(roomName)
     .then(() => {
-      res.send(`${roomName} room deleted\n`);
+      res.sendStatus(200);
     })
     .catch(() => {
-      res.send(`${roomName} delete failed\n`);
+      res.sendStatus(500);
     });
 });
 

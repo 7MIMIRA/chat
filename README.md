@@ -13,7 +13,7 @@ That.. and because y not ;)
 |❌ GET|/api/users/{room_id}|requests a list of users for a given room|
 |❌ GET|/api/user/{user_id}|requests details of a specific user|
 |❌ GET|/api/messages/{room_id}|requests the messages for a given room|
-|❌ GET|/api/rooms|requests a list of rooms|
+|✅ GET|/api/rooms|requests a list of rooms|
 |❌ POST|/api/user|creates a user|
 |❌ POST|/api/message|submits a message for a given room|
 |✅ POST|/api/room/{room_name}|creates a room|

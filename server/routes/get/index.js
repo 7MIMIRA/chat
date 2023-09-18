@@ -1,8 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const { listRooms } = require('../../../DAL/rooms.js');
 
 router.get('/rooms', (_req, res) => {
-  res.send("You looking for rooms?");
+  listRooms()
+    .then((data) => {
+        res.send(data);
+    })
+    .catch(error => {
+        console.error(error);
+        res.sendStatus(500);
+    });
 });
 
 router.get('/messages/:roomId', (req, res) => {
