@@ -13,11 +13,16 @@ async function createRoom(roomName) {
   await room.save();
 }
 
+async function listRooms() {
+  return await Room.find();
+}
+
 async function deleteRoom(name) {
   await Room.deleteOne({ name });
 }
 
 module.exports = {
   createRoom,
+  listRooms,
   deleteRoom
 };
